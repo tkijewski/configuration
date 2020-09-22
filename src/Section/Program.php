@@ -146,8 +146,8 @@ class Program extends Named
             ->setDefined('stdout_logfile')
             ->setAllowedTypes('stdout_logfile', 'string');
 
-        $resolver->setDefined('stdout_logfile_maxbytes');
-        $this->configureByteProperty('stdout_logfile_maxbytes', $resolver);
+        $resolver->setDefined('stdout_logfile_maxbytes')
+            ->setAllowedTypes('stdout_logfile_maxbytes', 'int');
 
         $resolver->setDefined('stdout_logfile_backups')
             ->setAllowedTypes('stdout_logfile_backups', 'int');
@@ -173,8 +173,8 @@ class Program extends Named
             ->setDefined('stderr_logfile')
             ->setAllowedTypes('stderr_logfile', 'string');
 
-        $resolver->setDefined('stderr_logfile_maxbytes');
-        $this->configureByteProperty('stderr_logfile_maxbytes', $resolver);
+        $resolver->setDefined('stderr_logfile_maxbytes')
+            ->setAllowedTypes('stderr_logfile_maxbytes','int');
 
         $resolver->setDefined('stderr_logfile_backups')
             ->setAllowedTypes('stderr_logfile_backups', 'int');
